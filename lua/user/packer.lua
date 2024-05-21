@@ -4,15 +4,15 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-  use {
+  use { -- fuzzy file finder
 	  'nvim-telescope/telescope.nvim', tag = '0.1.6',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use { "scottmckendry/cyberdream.nvim" }
+  use { "scottmckendry/cyberdream.nvim" } -- colorscheme
 
-  use {
+  use { -- language specific syntax highlighting
 	  'nvim-treesitter/nvim-treesitter',
 	  run = function()
 		  local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
@@ -21,15 +21,15 @@ return require('packer').startup(function(use)
   }
 
   use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
-  use {
+  use { -- hot file storage
 	  "ThePrimeagen/harpoon",
 	  branch = "harpoon2",
 	  requires = { {"nvim-lua/plenary.nvim"} }
   }
 
-  use{'mbbill/undotree'}
+  use{'mbbill/undotree'} -- lets you view past versions of document easier that git
 
-  use {
+  use { -- lsp requirements
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
 	  requires = {
@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
   }
 
 
-  vim.cmd("colorscheme cyberdream")
+  vim.cmd("colorscheme cyberdream") -- turn on color scheme
 
 end)
 
