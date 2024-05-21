@@ -4,4 +4,3 @@ mv ./* ../
 mv ./.* ../
 cd ..
 rmdir nvimconfig
-cd ..
