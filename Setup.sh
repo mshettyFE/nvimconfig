@@ -1,3 +1,6 @@
-#!/user/bin/env bash
+#!/bin/bash -l
 
-
+mv ./* ../
+mv ./.* ../
+cd ..
+rm nvimconfig
