@@ -28,6 +28,8 @@ return require('packer').startup(function(use)
   }
 
   use{'mbbill/undotree'} -- lets you view past versions of document easier that git
+  use{'tpope/vim-fugitive'} -- git from vim
+
 
   use { -- lsp requirements
 	  'VonHeikemen/lsp-zero.nvim',
@@ -42,10 +44,9 @@ return require('packer').startup(function(use)
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'L3MON4D3/LuaSnip'},
 	  }
-  }
+ }
 
 
-  vim.cmd("colorscheme cyberdream") -- turn on color scheme
 
 end)
 
