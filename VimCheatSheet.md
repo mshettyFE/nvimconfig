@@ -69,7 +69,7 @@ Shift +[ | Jump to the end of the previous paragraph |
 | > | Indent a line. Can do combos like ```>4j``` to indent the next 4 lines, or ```vap>``` to indent a block of text|
 | Ctrl+v| Enter vertical editing mode. Can select multiple lines by appending j to the end|
 | % | Jump to matching parentheses |
-
+| Ctrl_^ | Jump to last file |
 
 ### Counting
 

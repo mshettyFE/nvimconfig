@@ -23,3 +23,13 @@ vim.keymap.set("x", "<leader>p" , "\"_dp")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- same, but with delete
+vim.keymap.set("n", "<leader>d", "\"+d")
+vim.keymap.set("v", "<leader>d", "\"+d")
+
+-- Q turns on some really mode of vim. Not useful nowadays, so neuter it
+vim.keymap.set("n","Q","<nop>")
+
+-- Allows you to find and replace the currently highlighted word
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
