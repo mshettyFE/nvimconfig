@@ -29,7 +29,6 @@ return require('packer').startup(function(use)
   use{'mbbill/undotree'} -- lets you view past versions of document easier that git
   use{'tpope/vim-fugitive'} -- git from vim
 
-
   use { -- lsp requirements
 	  "VonHeikemen/lsp-zero.nvim",
 	  branch = 'v3.x',
