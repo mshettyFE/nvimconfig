@@ -69,7 +69,10 @@ Shift +[ | Jump to the end of the previous paragraph |
 | > | Indent a line. Can do combos like ```>4j``` to indent the next 4 lines, or ```vap>``` to indent a block of text|
 | Ctrl+v| Enter vertical editing mode. Can select multiple lines by appending j to the end|
 | % | Jump to matching parentheses |
-| Ctrl_^ | Jump to last file |
+| Ctrl+^ | Jump to last file |
+| Ctrl+w+s| Create a new window horizontally copying the current buffer|
+| Ctrl+w+v | Create a new window vertically, copying the current buffer |
+| Ctrl+w+<jkhl> | Jump to window in the jkhl direction(s) |
 
 ### Counting
 

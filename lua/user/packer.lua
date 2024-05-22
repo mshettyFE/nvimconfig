@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
          {'nvim-lua/plenary.nvim'}
      }
  }
- 
-end)
 
-   
+ use{'sunjon/shade.nvim'} -- highlight active window
+
+end)

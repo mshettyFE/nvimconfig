@@ -33,6 +33,3 @@ vim.keymap.set("n","Q","<nop>")
 
 -- Allows you to find and replace the currently highlighted word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
--- open terminal in current directory
-vim.keymap.set("n","<leader>tm", ":vsplit term://%:p:h//bash")
