@@ -5,3 +5,5 @@ Just git clone the repository into the directory ```/home/<username>/.config/nvi
   ./Setup.sh
   cd ..
 ```
+
+You can install additional LSP stuff via ```:Mason```, just make sure you save and quit for changes to take effect
