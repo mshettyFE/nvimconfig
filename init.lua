@@ -1,2 +1,2 @@
 require("user")
-vim.cmd("colorscheme cyberdream")
+require("cyberdream")

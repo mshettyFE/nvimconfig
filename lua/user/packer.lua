@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
   }
 
   use { "scottmckendry/cyberdream.nvim" } -- colorscheme
-
   use { -- language specific syntax highlighting
 	  'nvim-treesitter/nvim-treesitter',
 	  run = function()
@@ -32,7 +31,7 @@ return require('packer').startup(function(use)
 
 
   use { -- lsp requirements
-	  'VonHeikemen/lsp-zero.nvim',
+	  "VonHeikemen/lsp-zero.nvim",
 	  branch = 'v3.x',
 	  requires = {
 		  --- Uncomment the two plugins below if you want to manage the language servers from neovim
@@ -46,7 +45,14 @@ return require('packer').startup(function(use)
 	  }
  }
 
-
-
+ use {
+     -- mass find and replace (NO UNDO!!!)
+     "nvim-pack/nvim-spectre",
+     requires = {
+         {'nvim-lua/plenary.nvim'}
+     }
+ }
+ 
 end)
 
+   
