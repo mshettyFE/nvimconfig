@@ -41,7 +41,7 @@ lsp_zero.on_attach(function(client, bufnr)
 
     local opts = { buffer = bufnr, remap = false }
 
-    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)                -- jump to defintion
+    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)                -- jump to defention
     vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)               -- jump to declaration
     vim.keymap.set("n", "gt", function() vim.lsp.buf.type_definition() end, opts)           -- jump to type type_definition
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)                      -- Get hover text
@@ -63,7 +63,6 @@ require("mason").setup()
 
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "ast_grep",
         "autotools_ls",
         "bashls",
         "clangd",
@@ -72,7 +71,6 @@ require("mason-lspconfig").setup({
         "jsonls",
         "lua_ls",
         "marksman",
-        "ruff_lsp",
         "rust_analyzer",
         "sqlls",
         "typos_lsp",
@@ -80,9 +78,6 @@ require("mason-lspconfig").setup({
         "yamlls"
     },
     handlers = {
-        function(ast_grep)
-            require("lspconfig")[ast_grep].setup({})
-        end,
         function(autotools_ls)
             require("lspconfig")[autotools_ls].setup({})
         end,
@@ -106,9 +101,6 @@ require("mason-lspconfig").setup({
         end,
         function(marksman)
             require("lspconfig")[marksman].setup({})
-        end,
-        function(ruff_lsp)
-            require("lspconfig")[ruff_lsp].setup({})
         end,
         function(rust_analyzer)
             require("lspconfig")[rust_analyzer].setup({})

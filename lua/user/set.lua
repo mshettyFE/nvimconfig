@@ -2,9 +2,9 @@ vim.opt.nu = true -- turn line numbers on
 vim.opt.relativenumber = true -- turn relative line numbers on
 
 -- tabs are 4 spaces
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true -- expand tabs to spaces
 
 vim.opt.smartindent = true -- syntax specific indentation
