@@ -31,5 +31,8 @@ vim.keymap.set("v", "<leader>d", "\"+d")
 -- Q turns on some really mode of vim. Not useful nowadays, so neuter it
 vim.keymap.set("n","Q","<nop>")
 
+-- Q turns on some really mode of vim. Not useful nowadays, so neuter it
+vim.keymap.set("n","s","d")
+
 -- Allows you to find and replace the currently highlighted word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
