@@ -36,4 +36,7 @@ vim.opt.whichwrap:append("<,>,[,],h,l")
 -- space is mapleader
 vim.g.mapleader = " "
 
+vim.opt.mouse = 'a'
 
+-- Ensure this is also set to link y/p to the system
+vim.opt.clipboard = 'unnamedplus'

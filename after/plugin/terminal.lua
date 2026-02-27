@@ -8,7 +8,7 @@ vim.api.nvim_create_user_command("TermToggle", function()
     end
 
     -- Open new window 25 lines tall at the bottom of the screen
-    vim.cmd("botright 10 new")
+    vim.cmd("botright 30 new")
     vim.g.term_win_id = vim.api.nvim_get_current_win()
 
     local has_term_buf = vim.g.term_buf_id ~= nil and vim.api.nvim_buf_is_valid(vim.g.term_buf_id)
