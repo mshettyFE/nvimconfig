@@ -31,7 +31,7 @@
     -- Q turns on some really mode of vim. Not useful nowadays, so neuter it
     vim.keymap.set("n","Q","<nop>")
 
-    -- Q turns on some really mode of vim. Not useful nowadays, so neuter it
+    -- Remap s to d (delete) since s (substitute) duplicates cl
     vim.keymap.set("n","s","d")
 
     -- Allows you to find and replace the currently highlighted word

@@ -5,7 +5,6 @@ return{
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
-            'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-nvim-lsp-signature-help',
             'onsails/lspkind.nvim',
             'ray-x/cmp-treesitter',
@@ -57,7 +56,6 @@ return{
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
                 { name = 'buffer' },
-                { name = 'calc' },
                 { name = 'path' },
                 { name = 'treesitter' },
             })

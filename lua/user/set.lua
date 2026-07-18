@@ -1,7 +1,7 @@
 vim.opt.nu = true -- turn line numbers on
 vim.opt.relativenumber = true -- turn relative line numbers on
 
--- tabs are 4 spaces
+-- tabs are 2 spaces
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2

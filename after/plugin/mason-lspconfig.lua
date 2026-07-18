@@ -10,22 +10,22 @@ require("mason-lspconfig").setup {
     ensure_installed = { "clangd","rust_analyzer", "jedi_language_server", "gopls", "ols" },
 }
 
-vim.api.nvim_create_autocmd("CursorHold", {
-  buffer = bufnr,
-  callback = function()
-    local opts = {
-      focusable = false,
-      close_events = { "CursorMoved", "CursorMovedI", "BufHidden", "InsertCharPre" },
-      scope = 'line',
-    }
-    vim.diagnostic.open_float(nil, opts)
-  end
-})
-
 -- Create an autocommand that runs when an LSP attaches to a buffer
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)
     local opts = { buffer = event.buf }
+
+    -- Show diagnostics for the current line in a float on CursorHold
+    vim.api.nvim_create_autocmd("CursorHold", {
+      buffer = event.buf,
+      callback = function()
+        vim.diagnostic.open_float(nil, {
+          focusable = false,
+          close_events = { "CursorMoved", "CursorMovedI", "BufHidden", "InsertCharPre" },
+          scope = 'line',
+        })
+      end
+    })
 
     -- Replicating the new Neovim defaults
     vim.keymap.set('n', 'grn', vim.lsp.buf.rename, opts)
