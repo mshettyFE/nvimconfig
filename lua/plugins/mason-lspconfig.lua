@@ -32,7 +32,7 @@ return {
                         callback = function()
                             vim.diagnostic.open_float(nil, {
                                 focusable = false,
-                                close_events = { "CursorMoved", "CursorMovedI", "BufHidden", "InsertCharPre" },
+                                close_events = { "CursorMoved", "CursorMovedI", "BufHidden", "BufLeave", "WinLeave", "InsertCharPre" },
                                 scope = 'line',
                             })
                         end
