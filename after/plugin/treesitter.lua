@@ -1,6 +1,13 @@
+-- Compatibility shim: archived nvim-treesitter `master` passes the now-removed
+-- `--no-bindings` flag to tree-sitter CLI >= 0.25. Override the args before
+-- the first install runs.
+require("nvim-treesitter.install").ts_generate_args = {
+  "generate", "--abi", vim.treesitter.language_version,
+}
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c", "lua","cpp","python","javascript", "vim", "vimdoc", "query","rust", "html","css","markdown" },
+  ensure_installed = { "c", "lua","cpp","python","javascript", "vim", "vimdoc", "query","rust", "html","css","markdown","markdown_inline","latex" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,

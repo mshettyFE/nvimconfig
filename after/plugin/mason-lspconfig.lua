@@ -7,7 +7,7 @@ require("lspconfig").clangd.setup({
 vim.lsp.enable("julials")
 
 require("mason-lspconfig").setup {
-    ensure_installed = { "clangd","rust_analyzer", "jedi_language_server", "gopls" },
+    ensure_installed = { "clangd","rust_analyzer", "jedi_language_server", "gopls", "ols" },
 }
 
 vim.api.nvim_create_autocmd("CursorHold", {
